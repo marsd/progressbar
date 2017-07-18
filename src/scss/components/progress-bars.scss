@@ -1,0 +1,10 @@
+.progress-bars {
+    width: $width;
+    margin: 20px 0;
+    border: 1px solid $border;
+    padding: 10px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        max-width: 100%;
+    }
+}

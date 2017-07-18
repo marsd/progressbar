@@ -6,11 +6,13 @@
 /**
  * CSS Foundation
  */
-@import 'base/normalize';
-@import 'base/animate';
-@import 'base/sakura';
+@import 'vendors/normalize';
+@import 'vendors/animate';
+@import 'vendors/sakura';
 /**
  * Website structure and components
  */
-@import 'components/site';
-@import 'components/bars';
+@import 'pages/site';
+@import 'components/progress-bars';
+@import 'components/bar-controls';
+@import 'components/bar-item';

@@ -1,6 +1,20 @@
-import Bars from './Bars.js';
+import Bars from './Bars';
+import Control from './Control';
+import 'blissfuljs';
 
-// var body = document.querySelector('body');
-// const pointySpan = document.createElement('span');
-// pointySpan.appendChild(document.createTextNode(`Good point: = ${pointy}`));
-// document.body.appendChild(pointySpan);
+const endpoint = "http://pb-api.herokuapp.com/bars";
+const container = $("#progress-bars");
+const request = $.fetch(endpoint, {
+    method: "GET",
+    responseType: "json"
+})
+    .then(xhr =>
+    {
+        const json = xhr.response;
+        const bars = new Bars(json, container);
+        const controls = new Control(bars, container);
+    })
+    .catch(function (error)
+    {
+        console.error(error, "code: " + error.status);
+    });

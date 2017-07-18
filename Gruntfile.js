@@ -5,7 +5,7 @@ module.exports = grunt =>
     
     var path = require("path"),
         buildCss = [
-            "clean:css", "sass:dev", "cssmin", "copy:css", "clean:compiling-css"
+            "clean:compiling-css", "sass:dev", "clean:css", "cssmin", "copy:css", "clean:compiling-css"
         ],
         buildJs = [
             "jshint:dev",
@@ -13,7 +13,7 @@ module.exports = grunt =>
             "webpack:build",
             "uglify:js",
             "copy:js",
-            //"clean:compiling-js",
+            "clean:compiling-js",
         ];
     
     grunt.initConfig({

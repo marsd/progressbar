@@ -1525,15 +1525,105 @@ label, legend, fieldset {
 /**
  * Website structure and components
  */
+* {
+  box-sizing: border-box; }
+
 body {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif; }
+  @media screen and (max-width: 640px) {
+    body {
+      max-width: 100%; } }
 
 textarea, select, input[type] {
   line-height: 1.2; }
 
-.bars {
+.progress-bars {
   width: 500px;
-  margin: 0 auto; }
+  margin: 20px 0;
+  border: 1px solid #2c8898;
+  padding: 10px; }
+  @media screen and (max-width: 640px) {
+    .progress-bars {
+      max-width: 100%; } }
+
+.bar-controls {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #2c8898; }
+
+.bar-select {
+  width: 30%;
+  display: inline-block; }
+  .bar-select__selector {
+    width: 100%;
+    margin: 0;
+    transition: all 0.3s ease-in-out; }
+  .bar-select--error .bar-select__selector {
+    outline: none;
+    border-color: #b7292f;
+    box-shadow: 0 0 10px #b7292f; }
+  @media screen and (max-width: 640px) {
+    .bar-select {
+      width: 100%;
+      display: block; } }
+
+.bar-buttons {
+  width: 70%;
+  display: inline-block;
+  padding-left: 3%; }
+  .bar-buttons__button {
+    width: 20%;
+    margin-left: 5%; }
+    .bar-buttons__button:first-of-type {
+      margin: 0; }
+  @media screen and (max-width: 640px) {
+    .bar-buttons {
+      margin-top: 10px;
+      padding: 0;
+      width: 100%;
+      display: block; } }
+
+.bar-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 40px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; }
+  .bar-item__value {
+    color: #333;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: block;
+    z-index: 9;
+    line-height: 40px;
+    height: 40px; }
+    .bar-item__value:after {
+      content: "%"; }
+  .bar-item__fill {
+    height: 40px;
+    position: absolute;
+    background-color: #96e4db;
+    z-index: 8;
+    transition: all 0.3s ease-in-out; }
+  .bar-item:nth-child(even) .bar-item__fill {
+    background-color: #8bb6dd; }
+  .bar-item--error .bar-item__fill {
+    background-color: #b7292f !important; }
+  .bar-item--error .bar-item__value {
+    color: #f0f0f0; }
+  .bar-item--selected {
+    outline: none;
+    border-color: #497bc5;
+    box-shadow: 0 0 10px #a1cded; }
+  .bar-item:first-child {
+    margin-top: 0; }
+  .bar-item:last-child {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

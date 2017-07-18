@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+        max-width: 100%;
+    }
+}
+
+textarea, select, input[type] {
+    line-height: 1.2;
+}

@@ -21,7 +21,7 @@
         "grunt-contrib-cssmin": "latest",
         "grunt-contrib-jshint": "latest",
         "grunt-contrib-sass": "^1.0.0",
-        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
         "grunt-contrib-watch": "latest",
         "grunt-webpack": "^3.0.2",
         "jshint-stylish": "latest",
@@ -30,7 +30,6 @@
         "webpack": "^3.3.0"
     },
     "dependencies": {
-        "superagent": "^3.5.2",
-        "superagent-jsonapify": "^1.4.5"
+        "blissfuljs": "^1.0.3"
     }
 }

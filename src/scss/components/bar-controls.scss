@@ -1,0 +1,49 @@
+.bar-controls {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $border;
+}
+
+.bar-select {
+    width: 30%;
+    display: inline-block;
+    
+    &__selector {
+        width: 100%;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    &--error &__selector {
+        outline: none;
+        border-color: $bar-fill-error;
+        box-shadow: 0 0 10px $bar-fill-error;
+    }
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+        display: block;
+    }
+}
+
+.bar-buttons {
+    width: 70%;
+    display: inline-block;
+    padding-left: 3%;
+    
+    &__button {
+        width: 20%;
+        margin-left: 5%;
+        
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+}

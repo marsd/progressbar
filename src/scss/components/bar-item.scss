@@ -1,0 +1,58 @@
+.bar-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: $bar-height;
+    background-color: $background;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    
+    &__value {
+        color: $value-color;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        display: block;
+        z-index: $zindex-val;
+        line-height: $bar-height;
+        height: $bar-height;
+        
+        &:after {
+            content: "%";
+        }
+    }
+    
+    &__fill {
+        height: $bar-height;
+        position: absolute;
+        background-color: $bar-fill;
+        z-index: $zindex-fill;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    &:nth-child(even) &__fill {
+        background-color: $bar-fill-alternative;
+    }
+    
+    &--error &__fill {
+        background-color: $bar-fill-error !important;
+    }
+    &--error &__value {
+        color: $value-alt-color;
+    }
+    
+    &--selected {
+        outline: none;
+        border-color: $selected-border;
+        box-shadow: 0 0 10px $selected-glow;
+    }
+    
+    &:first-child {
+        margin-top: 0;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
