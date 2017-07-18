@@ -2,7 +2,7 @@ import Bars from './Bars';
 import Control from './Control';
 import 'blissfuljs';
 
-const endpoint = "http://pb-api.herokuapp.com/bars";
+const endpoint = "//pb-api.herokuapp.com/bars";
 const container = $("#progress-bars");
 const request = $.fetch(endpoint, {
     method: "GET",
