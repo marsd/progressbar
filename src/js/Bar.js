@@ -62,7 +62,7 @@ class Bar {
             }
         });
         
-        if (this.value > this.limit) {
+        if (this.percent > 100) {
             this.elem.classList.add('bar-item--error');
         }
         else {
